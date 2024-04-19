@@ -1,0 +1,8 @@
+.categorylist_contenedor {
+    display: flex;
+    justify-content: left;
+    list-style: none;
+    gap: 15px;
+    padding-right: 50px;
+    
+}
