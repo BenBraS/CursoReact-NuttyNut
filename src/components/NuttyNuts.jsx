@@ -1,8 +1,10 @@
+import ImagenLogo from "./ImagenLogo";
 function NuttyNuts()
 {
     return (
         <div>
-        <h1>NuttyNuts</h1>
+        
+        <ImagenLogo />
         </div>
     )
 }
