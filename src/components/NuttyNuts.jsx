@@ -1,4 +1,4 @@
-import ImagenLogo from "./ImagenLogo";
+import ImagenLogo from "./ImgLogo/ImagenLogo";
 function NuttyNuts()
 {
     return (

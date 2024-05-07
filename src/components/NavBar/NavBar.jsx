@@ -1,5 +1,5 @@
 
-import CartWidget from "../CartWidget";
+import CartWidget from "../CartWidget/CartWidget";
 import CategoryList from "../CategoryList/CategoryList";
 import "./NavBar.css";
 

@@ -1,0 +1,14 @@
+.item_count_container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item_count_counter_container{
+    display: flex;
+    gap: 10px; 
+}
+
+.item_count_button{
+    padding: 5px 10px;
+}

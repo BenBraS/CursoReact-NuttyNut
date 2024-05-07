@@ -1,23 +1,26 @@
 import "./CategoryList.css"
-
+import { Link } from "react-router-dom";
 function CategoryList() {
     return (
         <nav>
          <ul className="categorylist_contenedor">
             <li>
-                <a href="/#">Nueces</a>
+            <Link to ={"/nueces"}>Nueces</Link>
             </li>
             <li>
-                <a href="/#">Almendras</a>
+            <Link to ={"/almendras"}>Almendras</Link>
             </li>
             <li>
-                <a href="/#">Maní</a>
+            <Link to ={"/mani"}>Mani</Link>
             </li>
             <li>
-                <a href="/#">Castañas</a>
+            <Link to ={"/castanhas"}>Castañas</Link>
             </li>
             <li>
-                <a href="/#">Otracategoría</a>
+            <Link to ={"/avellanas"}>Avellanas</Link>
+            </li>
+            <li>
+                <a href="/#">Todos</a>
             </li>
 
          </ul>

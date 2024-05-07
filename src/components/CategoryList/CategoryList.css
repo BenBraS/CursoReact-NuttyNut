@@ -4,5 +4,25 @@
     list-style: none;
     gap: 15px;
     padding-right: 50px;
-    
+
 }
+
+.categorylist_contenedor li{
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: aqua;
+}
+
+.categorylist_contenedor li:hover{
+    background-color: #e1e1e1;
+}
+
+.categorylist_contenedor li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+
+}
+
