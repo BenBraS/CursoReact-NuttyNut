@@ -1,12 +1,15 @@
 import ImagenLogo from "./ImgLogo/ImagenLogo";
-function NuttyNuts()
-{
-    return (
-        <div>
-        
+import { Link } from "react-router-dom";
+
+function NuttyNuts() {
+  return (
+    <div>
+      
+      <Link to="/"> 
         <ImagenLogo />
-        </div>
-    )
+      </Link>
+    </div>
+  );
 }
 
-export default NuttyNuts; 
+export default NuttyNuts;

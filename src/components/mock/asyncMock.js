@@ -6,7 +6,7 @@ const products = [
       description:
         "Nueces Frescas",
       image: "https://img.freepik.com/foto-gratis/nuez-fresca_144627-16138.jpg?w=1380&t=st=1703206964~exp=1703207564~hmac=57c460a9c95d7be8f6645649a89f33169e907f271898765a8aa6d9fd92f79006",
-      stock: 5,
+      stock: 2,
       category:"nueces",
     },
     {
@@ -49,7 +49,7 @@ const products = [
         "Deliciosas Castanhas saladas directamente del norte de Brasil.",
       image: "https://img.freepik.com/foto-gratis/vista-lateral-anacardos-sobre-fondo-negro_141793-8649.jpg?w=1380&t=st=1703207129~exp=1703207729~hmac=f2fea39dd9f84052c1f075118ee8ad587144fd1c93c762b35b259cd8a0817293",
       stock: 1,
-      category:"castañas",
+      category:"castanhas",
     },
     {
         id: 6,
