@@ -1,6 +1,5 @@
 import "./CategoryList.css"
 import { Link } from "react-router-dom";
-import HomePage from "../Pages/HomePage";
 function CategoryList() {
   return (
     <nav>
@@ -21,7 +20,7 @@ function CategoryList() {
           <Link to="/category/avellanas">Avellanas</Link> 
         </li>
         <li>
-          <Link to= "{HomePage}">Todos</Link> 
+          <Link to= "/">Todos</Link> 
         </li>
       </ul>
     </nav>
