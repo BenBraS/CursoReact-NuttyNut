@@ -1,4 +1,4 @@
-.navbar_container{
+.navbar_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -6,3 +6,27 @@
     padding-right: 30%;
 }
 
+.nav_left {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.category_list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category_list li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.category_list li:last-child {
+    margin-right: 0;
+}
+
+.active_link {
+    /* Estilos para el enlace activo si es necesario */
+}

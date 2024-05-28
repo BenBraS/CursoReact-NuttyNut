@@ -1,15 +1,26 @@
 import {useEffect, useState} from "react";
-import { getProducts } from "../components/mock/asyncMock";
+import { getProducts, getProductByCategory } from "../components/mock/asyncMock";
 
-export default function useProducts(){
-const [products, setProducts] = useState([]);
-const [isLoading, setIsLoading] = useState(true);
+
+
+export default function useProducts (category){
+    const [products, setProducts] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
 useEffect(() => {
-    getProducts()
-    .then((data) => setProducts(data))
-    .finally(() => setIsLoading(false));
-}, []);
-
-return {products, isLoading}
+    setIsLoading(true);
+    if(category){
+        getProductByCategory(category)
+        .then((data) => setProducts(data))
+        .finally (() => setIsLoading(false));
+    } 
+    else{
+        getProducts()
+        .then((data) => setProducts(data))
+            .finally (() => setIsLoading(false));
 }
+}, [category]);
+
+return {products, isLoading}; 
+}
+

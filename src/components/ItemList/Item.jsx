@@ -1,5 +1,4 @@
 import useCount from "../../hooks/useCount";
-import ItemCount from "../Itemcount/ItemCount";
 import "./Item.css"
 import { Link } from "react-router-dom";
 
