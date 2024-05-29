@@ -1,24 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { getProductByCategory } from "../mock/asyncMock"; 
-import ProductList from "../ItemList/ItemList"; 
+import useProductsbyCategoryFireBase from "../../hooks/useProductsbyCategoryFireBase"
+import {useParams} from "react-router-dom"
+import ItemList from "../ItemList/ItemList"; 
 
 function CategoryPage() {
-  const { category } = useParams(); 
-  const [products, setProducts] = useState([]);
+  const {categoryId} = useParams();
 
-  useEffect(() => {
-    getProductByCategory(category).then((result) => {
-      setProducts(result);
-    });
-  }, [category]);
+   const {products, isLoading}= useProductsbyCategoryFireBase(categoryId)
 
   return (
     <div>
-      <h2>Productos en la categoría: {category}</h2>
-      <ProductList products={products} /> 
+      <h2>Productos en la categoría: {categoryId}</h2>
+      <ItemList products={products} /> 
+      
     </div>
   );
 }
+
 
 export default CategoryPage;

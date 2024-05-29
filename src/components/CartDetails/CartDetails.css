@@ -1,0 +1,13 @@
+.cart_details_container {
+    padding-top: 0.75rem; /* 12px */
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem; /* 20px */
+  }
+  
+  .cart_total {
+    margin-top: 0.75rem; /* 12px */
+    font-size: 1.25rem; /* 20px */
+    font-weight: 600;
+  }
+  

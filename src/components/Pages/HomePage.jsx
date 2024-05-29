@@ -1,12 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import useProductsbyCategoryFireBase from "../../hooks/useProductsbyCategoryFireBase"
+
 import ItemList from "../ItemList/ItemList"; 
-import useProducts from "../../hooks/useProducts"; 
-import "../ItemList/Item.css"
 
-function HomePage() {
-  const { isLoading, products } = useProducts(); 
+function HomePage({categoryId}) {
+const {products, isLoading}= useProductsbyCategoryFireBase(categoryId)
 
-  if (isLoading) return <h1>Cargando...</h1>; 
   return (
     <div>
       <h1>¡Bienvenidos/as a la mejor tienda de Frutos secos!</h1> 

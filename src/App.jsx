@@ -6,6 +6,8 @@ import ProductDetailPage from "./components/Pages/ProductDetailPage";
 import CategoryPage from "./components/Pages/CategoryPage";
 import CartProvider from "./components/contexts/CartProvider";
 import CartContainer from "./components/CartContainer/CartContainer";
+import CheckoutContainer from "./components/CheckoutContainer.jsx/CheckoutContainer";
+
 
 function App() {
   return (
@@ -14,9 +16,10 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} /> 
-          <Route path="/products/:id" element={<ProductDetailPage />} />
-          <Route path="/category/:category" element={<CategoryPage />} />
+          <Route path="/products/:productId" element={<ProductDetailPage />} />
+          <Route path="/category/:categoryId" element={<CategoryPage />} />
           <Route path= "/cart" element={<CartContainer />} />
+          <Route path="/checkout" element={<CheckoutContainer />} />
         </Routes>
        
       </Layout>

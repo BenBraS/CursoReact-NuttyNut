@@ -13,7 +13,7 @@ export default function Item({ item }) {
   return (
     <div className="item_container">
       <div className="item_img_container">
-        <img className="item_img" src={item.image} alt={item.title} />
+        <img className="item_img" src={item.imageUrl} alt={item.title} />
       </div>
       <h2 className="item_title">{item.title}</h2>
       <p className="item_description">{item.description}</p>

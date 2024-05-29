@@ -12,7 +12,7 @@ function CartWidget() {
     <Link to={"/cart"}>
       <div className="flex items-center">
         <CartIcon ancho={40} alto={40} />
-        <span className="rounded-full px-1 text-white bg-amber-400 font-semibold text-sm">
+        <span className="rounded-full">
           {calculateQuantity}
         </span>
       </div>

@@ -1,17 +1,18 @@
 import ItemList from "../ItemList/ItemList";
-import useProducts from "../../hooks/useProducts";
+import useProductsbyCategoryFireBase from "../../hooks/useProductsbyCategoryFireBase";
 import { useParams } from "react-router-dom";
 
-function ItemListContainer({ Greetings }) {
-  const { category } = useParams();
-
-  const { isLoading, products } = useProducts(category);
+function ItemListContainer() {
+  const { categoryId } = useParams();
+  const { products, isLoading } = useProductsbyCategoryFireBase(categoryId);
 
   if (isLoading) return <h1>Cargando...</h1>;
 
+  if (products.length === 0)
+    return <h1>Ups.. No tenemos productos para mostrarte.</h1>;
+
   return (
     <div>
-      <h1>{Greetings}</h1>
       <ItemList products={products} />
     </div>
   );

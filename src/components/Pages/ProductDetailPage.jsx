@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProductById } from '../mock/asyncMock';
+import useProductById from "../../hooks/useProductById";
 import ItemCount from '../Itemcount/ItemCount';
 import "../ItemList/Item.css";
 import "../Itemcount/ItemCount.css";
@@ -8,10 +8,9 @@ import CartContext from '../contexts/CartContext';
 import useCount from '../../hooks/useCount';
 
 const ProductDetailPage = () => {
+  const { productId } = useParams();  URL
+  const {product, loading} = useProductById(productId)
   const { addToCart } = useContext(CartContext);
-  const { id } = useParams();  URL
-  const productId = parseInt(id); 
-  const [product, setProduct] = useState(null);
   const { count, increment, decrement, reset } = useCount(0);
 
   
@@ -20,13 +19,7 @@ const ProductDetailPage = () => {
     reset();
   };
 
-  useEffect(() => {
-    getProductById(productId).then((data) => {
-      setProduct(data); 
-    });
-  }, [productId]);
 
-  
   if (!product) {
     return <div>Cargando...</div>;
   }
@@ -34,7 +27,7 @@ const ProductDetailPage = () => {
   return (
     <div className="item_container">
       <div className="item_img_container">
-        <img className="item_img" src={product.image} alt={product.title} /> 
+        <img className="item_img" src={product.imageUrl} alt={product.title} /> 
       </div>
       <h2 className="item_title">{product.title}</h2>
       <p className="item_description">{product.description}</p>

@@ -40,9 +40,7 @@ export default function ItemDetail({ item }) {
           Add to cart
         </button>
       </div>
-      <p>
-        Quedan <strong>{item.stock - count}</strong> unidades disponibles
-      </p>
+     
     </div>
   );
 }
