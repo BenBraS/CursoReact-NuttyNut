@@ -1,15 +1,15 @@
 .navbar_container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     color: rgb(0, 0, 0);
-    padding-right: 30%;
+   
 }
 
 .nav_left {
     display: flex;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 4rem;
 }
 
 .category_list {
@@ -27,6 +27,3 @@
     margin-right: 0;
 }
 
-.active_link {
-    /* Estilos para el enlace activo si es necesario */
-}

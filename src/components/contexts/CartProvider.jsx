@@ -50,7 +50,7 @@ export default function CartProvider({ children }) {
     .reduce((acc, item) => {
       return acc + item.product.price * item.quantity;
     }, 0)
-    .toFixed(2);
+    
 
   return (
     <CartContext.Provider

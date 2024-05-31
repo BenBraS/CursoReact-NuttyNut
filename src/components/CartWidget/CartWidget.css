@@ -1,0 +1,20 @@
+.cart-widget-conntainer {
+  display: flex;
+  align-items:flex-end;
+  flex-direction:column
+}
+
+.cart-quantity {
+  border-radius: 50%;
+  padding: 2px 6px;
+  background-color: #fcbf49; 
+  color: #ffffff; 
+  font-weight: bold;
+  font-size: 12px;
+  margin-left: 3px; 
+  text-decoration: none;
+}
+
+.link_cart_conntainer{
+    text-decoration: none;
+}

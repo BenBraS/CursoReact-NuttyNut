@@ -5,6 +5,7 @@ import "./CartItem.css";
 
 export default function CartItem({ item }) {
   const { removeFromCart, addToCart } = useContext(CartContext);
+  const total = item.product.price * item.quantity;
 
   return (
     <div className="cart_item">
@@ -22,21 +23,22 @@ export default function CartItem({ item }) {
           </Link>
           <p className="cart_item_quantity">Cantidad: {item.quantity}</p>
           <p className="cart_item_price">Precio: ${item.product.price}</p>
+          <p className="cart_item_total">Total por producto: ${total}</p> 
         </div>
         <div className="cart_item_buttons">
           <button
             className="cart_item_button"
             onClick={() => removeFromCart(item.product.id, 1)}
             type="button"
-          >
-            -
+          >- Productos
+            
           </button>
           <button
             className="cart_item_button"
             onClick={() => addToCart(item.product, 1)}
             type="button"
-          >
-            +
+          >+ Productos
+            
           </button>
         </div>
       </div>

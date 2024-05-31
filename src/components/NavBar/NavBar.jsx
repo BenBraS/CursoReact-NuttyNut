@@ -10,12 +10,10 @@ function NavBar(){
     const { cart } = useContext(CartContext);
     const calculateQuantity = cart.reduce((acc, item)=> acc + item.quantity, 0);
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar si el menú está abierto
-
-    const isMobile = useMediaQuery({ maxWidth: 767 }); // Define el tamaño máximo para considerar como "móvil"
-
+    const [isMenuOpen, setIsMenuOpen] = useState(false); 
+    const isMobile = useMediaQuery({ maxWidth: 767 }); 
     const handleMenuToggle = () => {
-        setIsMenuOpen(!isMenuOpen); // Cambiar el estado del menú
+        setIsMenuOpen(!isMenuOpen); 
     };
 
     return (
